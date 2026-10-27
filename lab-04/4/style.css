@@ -1,0 +1,61 @@
+
+
+/* 1. Комбінатор нащадків класу та тегу */
+p.text-background span {
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* 2. Комбінатор нащадків тегу, класу та тегу */
+div .text-background span {
+    background-color: yellow;
+}
+
+/* 3. Комбінатор нащадків двох тегів */
+span span {
+    background-color: gray;
+    text-decoration: line-through;
+}
+
+/* 4. Комбінатор нащадків трьох тегів */
+ol span span {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+/* 5. Комбінатор дочірнього елементу двох тегів */
+section > p {
+    text-shadow: 3px 3px 5px darkblue;
+    text-indent: 50px;
+}
+
+/* 6. Комбінатор дочірнього елементу двох тегів */
+li > ul {
+    list-style-image: url('img/li.svg'); 
+}
+
+/* 7. Комбінатор дочірнього елементу тегу та класу */
+div > p.text-background {
+    word-spacing: 50px;
+}
+
+/* 8. Комбінатор дочірнього елементу класу та тегу (використовуємо .bold з твого HTML) */
+div.bold > p {
+    font-weight: bold;
+}
+
+/* 9. Комбінатор дочірнього елементу класу та двох тегів */
+div.bold > section > p {
+    line-height: 45px;
+}
+
+/* 10. Комбінатор наступного сусіднього елемента */
+img + p {
+    background-color: brown;
+}
+
+/* 11. Комбінатор всіх сусідніх елементів */
+section ~ p {
+    color: red;
+}
