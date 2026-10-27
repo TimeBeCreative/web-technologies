@@ -1,0 +1,46 @@
+
+* {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    line-height: 40px; /* міжрядковий інтервал */
+}
+
+p {
+    color: green;
+    text-align: center;
+}
+
+div {
+    text-align: justify;
+}
+
+.red-text {
+    color: red;
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+/* 6 Селектор ідентифікатора для 2-го абзацу  */
+#special-text {
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* 7: Селектор класу для тіні тексту */
+/* Тінь: зміщення вправо 5px, зміщення вгору -5px, розмиття 3px*/
+.shadow-text {
+    text-shadow: 5px -5px 3px rgb(170, 255, 187); 
+}
+
+.first-block-style {
+    text-decoration: line-through; /* перекреслений текст */
+    text-transform: uppercase; 
+    text-indent: 50px; /* відступ першого рядка в 50px */
+}
+
+.second-block-style {
+    letter-spacing: 30px; /* інтервал між символами в 30px */
+    word-spacing: 50px; /* інтервал між словами в 50px*/
+}

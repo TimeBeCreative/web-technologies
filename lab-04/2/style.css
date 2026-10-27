@@ -1,0 +1,52 @@
+
+body {
+    font-family: "Times New Roman", Times, serif;
+}
+
+#recipe-title {
+    color: red; 
+    text-align: center;
+    font-size: 32px;
+}
+
+.section-heading {
+    text-align: center;
+    font-style: italic; 
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.ingredients-list {
+    list-style-type: none; /* Прибираємо крапочки */
+    text-align: center;
+    padding: 0; 
+    line-height: 1.5; 
+}
+
+.gray-text {
+    color: gray;
+}
+
+.underline-text {
+    text-decoration: underline;
+}
+
+.strike-text {
+    text-decoration: line-through;
+}
+
+.highlight-yellow {
+    background-color: yellow;
+}
+
+.green-line {
+    border: none;
+    border-top: 4px solid green;
+    width: 60%; 
+    margin: 20px auto; 
+}
+
+.recipe-conclusion {
+    text-align: center;
+    font-style: italic;
+}
