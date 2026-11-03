@@ -1,0 +1,124 @@
+/* ===== Фон сторінки ===== */
+body {
+    font-family: Arial, sans-serif;
+    color: #0b2e44;
+
+    background-color: #1b2a41;        /* запасний колір: видно, поки зображення завантажується */
+    background-image: url('img/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;           /* зображення заповнює всю сторінку, пропорції зберігаються */
+    background-attachment: fixed;     /* зображення нерухоме під час прокручування сторінки */
+}
+
+/* ===== Контейнер ===== */
+/* Коли вікно браузера вужче за 320px, контейнер більше не стискається через min-width:
+   його ширина лишається 320px, а частина контейнера виходить за межі вікна, тому
+   в браузері з'являється горизонтальна смуга прокрутки. */
+main {
+    box-sizing: border-box;
+    max-width: 900px;
+    min-width: 320px;
+    margin: 20px auto;                /* auto по боках центрує контейнер по горизонталі */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85);   /* напівпрозорий фон: крізь нього видно фон сторінки */
+}
+
+h1, h2 {
+    color: #1a6b8a;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+/* Підпис на білій плашці, щоб було видно текст поверх картинки */
+.caption {
+    padding: 2px 6px;
+    background-color: white;
+}
+
+/* ===== Блок «Теги» (display) ===== */
+.tags div {
+    display: inline;                  /* рядковий елемент: стоїть у рядок із сусідами */
+    width: 200px;                     /* НЕ ДІЄ */
+    height: 100px;                    /* НЕ ДІЄ */
+    padding: 5px 10px;
+    border: 1px solid #1a6b8a;
+    background-color: #d9f0f7;
+}
+/* width і height не діють на рядкові (inline) елементи: ширину визначає лише вміст,
+   а висоту рядок тексту. Щоб ці властивості запрацювали, потрібен display: block
+   або inline-block. */
+
+.tags span {
+    display: block;                   /* блоковий елемент: починається з нового рядка */
+    width: 150px;                     /* ДІЄ: блокові елементи мають заданий розмір */
+    margin-top: 6px;
+    padding: 5px 10px;
+    color: white;
+    background-color: #1a6b8a;
+}
+
+/* ===== Блок «Повторення фону» (background-repeat) ===== */
+.repeat div {
+    display: inline-block;
+    vertical-align: top;
+    width: 190px;
+    height: 200px;
+    margin: 0 8px 8px 0;
+    border: 2px solid #1a6b8a;
+    background-color: white;
+    background-image: url('img/icon.png');
+}
+
+.repeat div:nth-of-type(1) { background-repeat: repeat-x; }   /* повтор лише по горизонталі */
+.repeat div:nth-of-type(2) { background-repeat: repeat-y; }   /* повтор лише по вертикалі */
+.repeat div:nth-of-type(3) { background-repeat: space; }
+.repeat div:nth-of-type(4) { background-repeat: round; }
+/* Різниця між space і round (обидва повторюють картинку по обох осях без обрізання):
+   - space: картинки зберігають свій розмір, їх вміщується ціла кількість, а вільне місце
+     рівномірно розподіляється ПРОМІЖКАМИ між ними;
+   - round: проміжків немає, картинки трохи розтягуються або стискаються,
+     щоб у блоці поміщалась ціла кількість. */
+
+/* ===== Блок «Масштабування» (background-size) ===== */
+.size div {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    height: 200px;
+    margin: 0 10px 10px 0;
+    border: 2px solid #1a6b8a;
+    background-color: #dfe9ef;        /* видно порожні поля при contain */
+    background-image: url('img/photo.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.size div:nth-of-type(1) { background-size: contain; }   /* картинка повністю вміщується, можуть бути поля */
+.size div:nth-of-type(2) { background-size: cover; }     /* картинка заповнює блок повністю, краї обрізаються */
+
+/* ===== Блок «Прокручування фону» (background-attachment) ===== */
+.attachment div {
+    display: inline-block;
+    vertical-align: top;
+    width: 380px;
+    max-height: 150px;
+    overflow: auto;
+    margin: 0 10px 10px 0;
+    padding: 10px 100px 10px 10px;    /* справа місце під іконку */
+    border: 2px solid #1a6b8a;
+    background-color: white;
+    background-image: url('img/icon.png');
+    background-repeat: no-repeat;
+    background-position: right 25px top 10px;
+}
+
+.attachment div:nth-of-type(1) { background-attachment: scroll; }
+.attachment div:nth-of-type(2) { background-attachment: local; }
+/* Різниця під час прокручування вмісту всередині блоку:
+   - scroll: фон прив'язаний до самого блоку (його видимої рамки), тому іконка
+     стоїть на місці, а текст прокручується поверх неї;
+   - local: фон прив'язаний до вмісту, тому іконка прокручується разом із текстом
+     і зникає, коли текст їде вгору. */
