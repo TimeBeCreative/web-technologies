@@ -1,0 +1,123 @@
+/* Сторінка */
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgb(50, 40, 60);
+    background-color: rgb(243, 238, 249);
+}
+
+/* Вирівнювання по центру (замість атрибутів align) */
+div {
+    text-align: center;
+}
+
+/* Заголовки */
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgb(88, 56, 140);
+}
+
+/* Форма: padding тут єдина властивість поза вимогами, можна видалити */
+form {
+    background-color: white;
+    padding: 20px;
+}
+
+/* Зовнішні групи полів: «Особисті дані», «Про себе», «Навчання і вподобання» */
+fieldset {
+    background-color: rgb(250, 247, 254);
+}
+
+legend {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    font-variant: small-caps;
+    letter-spacing: 1px;
+    color: white;
+    background-color: rgb(120, 80, 180);
+}
+
+/* Вкладені групи: «Стать», «Рівень знань HTML», «Інтереси» */
+fieldset fieldset {
+    background-color: rgb(240, 233, 250);
+}
+
+fieldset fieldset legend {
+    font-size: 16px;
+    font-variant: normal;
+    letter-spacing: 0;
+    color: rgb(88, 56, 140);
+    background-color: rgb(214, 196, 240);
+}
+
+/* Підписи до полів */
+label {
+    font-weight: bold;
+    color: rgb(88, 56, 140);
+}
+
+/* Елементи форми не успадковують шрифт сторінки, тому задаємо його явно */
+input, select, textarea, button {
+    font-family: inherit;
+    font-size: 16px;
+    color: rgb(50, 40, 60);
+}
+
+/* Фон полів введення */
+input, select, textarea {
+    background-color: rgb(228, 217, 245);
+}
+
+/* Поле, у якому зараз курсор */
+input:focus, select:focus, textarea:focus {
+    background-color: rgb(255, 248, 210);
+}
+
+/* Підказки всередині полів (placeholder) */
+::placeholder {
+    font-style: italic;
+    color: rgb(130, 120, 145);
+}
+
+/* Назви груп у випадному списку «Улюблена їжа» */
+optgroup {
+    font-style: italic;
+    font-weight: bold;
+    color: rgb(88, 56, 140);
+}
+
+/* Кнопки */
+button, input[type="submit"], input[type="reset"] {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    background-color: rgb(120, 80, 180);
+}
+
+button:hover, input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: rgb(88, 56, 140);
+}
+
+/* Дрібний текст і посилання */
+small {
+    font-size: 13px;
+    font-style: italic;
+    color: rgb(110, 100, 120);
+}
+
+a {
+    color: rgb(120, 80, 180);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
