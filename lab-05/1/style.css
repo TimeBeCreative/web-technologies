@@ -1,4 +1,9 @@
-/* Стилі для головного блоку */
+/* Загальні налаштування шрифту */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Головний блок */
 div {
     background-color: rgb(255, 165, 0);
     width: 500px;
@@ -6,9 +11,78 @@ div {
     color: white;
 }
 
-/* Стилі для заголовка 1-го рівня */
+/* Заголовок 1-го рівня */
 h1 {
     font-size: 25px;
     font-weight: 900;
+    margin: 0 0 10px 0; /* верх 0, право 0, низ 10px, ліво 0 */
+}
+
+/* Загальні налаштування для всіх списків */
+ul {
+    list-style-position: inside; /* маркер всередині вмісту */
+    list-style-type: none;   /* стандартні крапки прибираємо */
+    margin: 0;
+    padding: 0; /* скидаємо стандартні 40px зліва */
+}
+
+/* Загальне для всіх пунктів li: іконка не повторюється */
+li {
+    background-repeat: no-repeat;
+}
+
+/* Список 1-го рівня: кожен li — окремий зелений блок */
+div > ul > li {
+    background-color: rgb(103, 158, 128);
+    padding: 0 20px 0 50px;              /* верх 0, право 20, низ 0, ліво 50 */
+    margin-bottom: 10px;                 /* оранжевий проміжок між блоками */
+    background-image: url('icons/check.png');
+    background-size: 30px 30px;
+    background-position: left 10px top 7px;
+}
+
+/* Список 2-го рівня */
+div > ul > li > ul {
+    font-size: 18px;
+    font-style: italic;
+}
+
+/* Пункти 2-го рівня */
+div > ul > li > ul > li {
+    background-color: rgb(153, 180, 102);
+    margin-bottom: 10px;
+    padding-left: 40px;                  /* місце під іконку */
+    background-size: 20px 20px;
+    background-position: left 10px center;
+}
+
+/* Усі span */
+span {
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+/* span 1-го рівня */
+div > ul > li > span {
+    font-size: 20px;
+    font-weight: 700;
+    background-color: rgb(199, 124, 106);
     margin-bottom: 10px;
 }
+
+/* span 2-го рівня */
+div > ul > li > ul > li > span {
+    background-color: rgb(218, 106, 32);
+}
+
+/* --- Іконки 2-го рівня (Підготовчий етап) --- */
+div > ul > li:nth-child(1) > ul > li:nth-child(1) { background-image: url('icons/route.png'); }
+div > ul > li:nth-child(1) > ul > li:nth-child(2) { background-image: url('icons/ticket.png'); }
+div > ul > li:nth-child(1) > ul > li:nth-child(3) { background-image: url('icons/hotel.png'); }
+div > ul > li:nth-child(1) > ul > li:nth-child(4) { background-image: url('icons/car.png'); }
+
+/* --- Іконки 2-го рівня (Відпочинок) --- */
+div > ul > li:nth-child(2) > ul > li:nth-child(1) { background-image: url('icons/bar.png'); }
+div > ul > li:nth-child(2) > ul > li:nth-child(2) { background-image: url('icons/casino.png'); }
+div > ul > li:nth-child(2) > ul > li:nth-child(3) { background-image: url('icons/museum.png'); }
+div > ul > li:nth-child(2) > ul > li:nth-child(4) { background-image: url('icons/festival.png'); }
