@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #0b2e44;
+}
+
+h1, h2 {
+    color: #1a6b8a;
+}
+
+/* ===== Частина 1: box-sizing ===== */
+
+/* Однакові для обох блоків: width, padding, border */
+.sizing div {
+    display: inline-block;   /* блоки стоять у ряд */
+    vertical-align: top;
+    width: 300px;
+    padding: 20px;
+    border: 5px solid #1a6b8a;
+    margin: 20px;            /* margin у загальну ширину блоку не входить */
+    background-color: #d9f0f7;
+}
+
+.sizing div:nth-of-type(1) {
+    box-sizing: content-box;
+    /* Загальна ширина: 300 + 2 * 20 + 2 * 5 = 350px */
+}
+
+.sizing div:nth-of-type(2) {
+    box-sizing: border-box;
+    /* Загальна ширина: 300px */
+}
+
+/* ===== Частина 2: overflow ===== */
+
+.overflow {
+    margin-bottom: 150px;    /* запас місця: при visible текст виходить за межі блоку вниз */
+}
+
+.overflow div {
+    display: inline-block;
+    vertical-align: top;     /* без цього блоки з різним overflow вирівнялись би по-різному */
+    width: 200px;
+    max-height: 80px;
+    border: 2px solid #1a6b8a;
+    margin: 20px;
+    background-color: #d9f0f7;
+}
+
+.overflow div:nth-of-type(1) { overflow: visible; }
+.overflow div:nth-of-type(2) { overflow: hidden; }
+.overflow div:nth-of-type(3) { overflow: scroll; }
+.overflow div:nth-of-type(4) { overflow: auto; }
+
+/* ===== Частина 3: display ===== */
+
+.menu ul {
+    list-style: none;        /* ховаємо маркери списку */
+    margin: 0;
+    padding: 0;
+    background-color: #d9f0f7;
+}
+
+.menu li {
+    display: inline-block;   /* пункти стоять в ряд без float і flex */
+}
+
+.menu a {
+    display: block;          /* тепер на посилання діють padding і розміри */
+    padding: 10px 20px;
+    color: white;
+    background-color: #1a6b8a;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: #0b5d85;
+}
+
+/* Приховуємо пункт «Новини».
+   display: none повністю прибирає елемент з відображення: він не займає місця
+   на сторінці, сусідні пункти зсуваються так, ніби його немає, його не видно і
+   не можна клікнути, а скрінрідери його теж пропускають.
+   Інші способи приховування поводяться інакше:
+   - visibility: hidden  лише робить елемент невидимим, але порожнє місце залишається;
+   - opacity: 0          елемент прозорий, але займає місце і лишається клікабельним;
+   - height: 0 + overflow: hidden  ховає лише по висоті, ширина й відступи можуть лишатися. */
+.menu li:nth-child(4) {
+    display: none;
+}

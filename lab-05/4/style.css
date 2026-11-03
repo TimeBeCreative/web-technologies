@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Спільні властивості всіх чотирьох блоків */
+div {
+    display: inline-block;   /* блоки стоять у ряд, але width і height діють */
+    vertical-align: top;     /* вирівнюємо блоки по верхньому краю */
+    box-sizing: border-box;  /* width і height включають padding: загальний розмір рівно 300x200 */
+    width: 300px;
+    height: 200px;
+    margin: 20px;            /* зовнішній відступ між блоками */
+    padding: 15px;           /* внутрішній відступ від країв до підпису */
+    font-size: 18px;
+    font-weight: bold;
+    color: #0b2e44;
+}
+
+/* Блок 1: діагональні смуги двох відтінків одного кольору */
+div:nth-of-type(1) {
+    background-image: linear-gradient(
+        45deg,
+        #33bbf1 25%,
+        #1a9bd7 25%, #1a9bd7 50%,
+        #33bbf1 50%, #33bbf1 75%,
+        #1a9bd7 75%
+    );
+    background-size: 40px 40px;
+}
+
+/* Блок 2: клітинки з двох лінійних градієнтів під прямим кутом */
+div:nth-of-type(2) {
+    background-color: #e6f6fd; /* світла основа, щоб клітинки були видні */
+    background-image:
+        linear-gradient(transparent 50%, rgba(0, 119, 170, 0.25) 50%),
+        linear-gradient(90deg, rgba(0, 119, 170, 0.25) 50%, transparent 50%);
+    background-size: 50px 50px;
+}
+
+/* Блок 3: радіальний градієнт-коло з центром у точці 30px 20px */
+div:nth-of-type(3) {
+    background-image: radial-gradient(
+        circle farthest-corner at 30px 20px,
+        #ffffff 0%,
+        #33bbf1 35%,
+        #1a9bd7 70%,
+        #0b5d85 100%
+    );
+}
+
+/* Блок 4: напівпрозорий градієнт поверх суцільного кольору, притиснутий донизу */
+div:nth-of-type(4) {
+    background-color: #33bbf1;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 50%;
+}
