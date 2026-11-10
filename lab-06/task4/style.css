@@ -13,7 +13,10 @@ body { margin: 0; padding-top: 62px; font-family: Arial, sans-serif; background:
 .dropdown li a { display: block; padding: 13px 16px; color: #333; text-align: left; text-decoration: none; }
 .dropdown li a:hover { background: #e8f5e9; color: #16813a; }
 .top-item:hover > .dropdown, .top-item:focus-within > .dropdown { display: block; }
-.sticky-nav { position: sticky; z-index: 80; top: 62px; margin-left: 220px; display: flex; gap: 0; background: #e1e8ef; box-shadow: 0 2px 6px #0002; }\n.sticky-nav a { padding: 13px 20px; color: #24445c; text-decoration: none; }\n.sticky-nav a:hover { color: white; background: #0876b9; }\n.side-nav { position: fixed; z-index: 90; top: 62px; left: 0; bottom: 0; width: 220px; background: #0876b9; }
+.sticky-nav { position: sticky; z-index: 80; top: 62px; margin-left: 220px; display: flex; gap: 0; background: #e1e8ef; box-shadow: 0 2px 6px #0002; }
+.sticky-nav a { padding: 13px 20px; color: #24445c; text-decoration: none; }
+.sticky-nav a:hover { color: white; background: #0876b9; }
+.side-nav { position: fixed; z-index: 90; top: 62px; left: 0; bottom: 0; width: 220px; background: #0876b9; }
 .side-item { position: relative; border-bottom: 1px solid #ffffff55; }
 .side-item > a { display: flex; align-items: center; gap: 13px; min-height: 52px; padding: 0 15px; color: white; text-decoration: none; }
 .side-item .material-symbols-outlined { font-size: 21px; }

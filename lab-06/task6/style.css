@@ -6,7 +6,7 @@ body { margin: 0; min-height: 100vh; padding: 65px 20px; font-family: Arial, san
 .popup-button:hover { background: #2868ce; }
 .popup-button:focus, .close-button:focus, .more-button:focus, .app:focus { outline: 3px solid #8ab4f8; outline-offset: 3px; }
 .popup { visibility: hidden; position: relative; width: 365px; max-width: calc(100vw - 30px); height: 410px; margin: 22px auto 0; padding: 12px 12px 0; background: white; border: 1px solid #ddd; box-shadow: 0 6px 22px #0003; text-align: left; opacity: 0; transform: translateY(-8px); transition: opacity .2s, transform .2s, visibility .2s; }
-#popup-toggle:checked ~ .popup { visibility: visible; opacity: 1; transform: translateY(0); }
+.state-toggle:checked ~ .popup { visibility: visible; opacity: 1; transform: translateY(0); }
 .popup-header { display: flex; justify-content: space-between; align-items: center; padding: 0 8px 10px; border-bottom: 1px solid #eee; }
 .close-button { font-size: 26px; line-height: 1; color: #777; cursor: pointer; padding: 2px 8px; }
 .close-button:hover { color: #222; background: #eee; border-radius: 50%; }
@@ -18,12 +18,13 @@ body { margin: 0; min-height: 100vh; padding: 65px 20px; font-family: Arial, san
 .app:hover { border-color: #d9dfe8; background: #f8faff; }
 .more-button { display: block; margin: 0 -12px; padding: 12px; background: #f5f5f5; color: #555; text-align: center; cursor: pointer; }
 .more-button:hover { background: #e8eef8; color: #1a73e8; }
+.more-toggle:focus-visible ~ .more-button { outline: 3px solid #8ab4f8; outline-offset: -3px; }
 .extra-apps { display: none; }
-#more-toggle:checked ~ .icon-scroll { overflow-y: auto; }
-#more-toggle:checked ~ .icon-scroll .extra-apps { display: contents; }
-#more-toggle:checked + .icon-scroll { scrollbar-width: thin; }
-#more-toggle:checked ~ .more-button { background: #e8eef8; }
-#popup-toggle:focus-visible + .popup-button { outline: 3px solid #8ab4f8; outline-offset: 3px; }
+.more-toggle:checked ~ .icon-scroll { overflow-y: auto; }
+.more-toggle:checked ~ .icon-scroll .extra-apps { display: contents; }
+.more-toggle:checked + .icon-scroll { scrollbar-width: thin; }
+.more-toggle:checked ~ .more-button { background: #e8eef8; }
+.state-toggle:focus-visible + .popup-button { outline: 3px solid #8ab4f8; outline-offset: 3px; }
 @media (max-width: 420px) {
   .popup { height: 390px; }
   .icon-scroll { height: 310px; }
