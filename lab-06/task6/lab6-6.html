@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Popup без JavaScript</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="demo">
+    <h1>Popup на HTML та CSS</h1>
+    <p>Клікніть і буде магія.</p>
+
+    <input class="state-toggle" type="checkbox" id="popup-toggle" tabindex="0">
+    <label class="popup-button" for="popup-toggle" tabindex="0">Відкрити застосунки</label>
+
+    <section class="popup" aria-label="Меню застосунків">
+      <header class="popup-header">
+        <strong>Застосунки</strong>
+        <label class="close-button" for="popup-toggle" tabindex="0" aria-label="Закрити popup">×</label>
+      </header>
+
+      <input class="more-toggle" type="checkbox" id="more-toggle" tabindex="0">
+      <div class="icon-scroll" tabindex="0" aria-label="Список застосунків">
+        <div class="icon-grid">
+          <a class="app" href="#calendar" tabindex="0"><span>🗓️</span><small>Calendar</small></a>
+          <a class="app" href="#mail" tabindex="0"><span>✉️</span><small>Mail</small></a>
+          <a class="app" href="#news" tabindex="0"><span>📰</span><small>News</small></a>
+          <a class="app" href="#maps" tabindex="0"><span>📍</span><small>Maps</small></a>
+          <a class="app" href="#files" tabindex="0"><span>📁</span><small>Files</small></a>
+          <a class="app" href="#contacts" tabindex="0"><span>👥</span><small>Contacts</small></a>
+          <a class="app" href="#translate" tabindex="0"><span>🌐</span><small>Translate</small></a>
+          <a class="app" href="#video" tabindex="0"><span>▶️</span><small>Videos</small></a>
+          <a class="app" href="#search" tabindex="0"><span>🔎</span><small>Search</small></a>
+          <a class="app" href="#photos" tabindex="0"><span>🖼️</span><small>Photos</small></a>
+          <a class="app" href="#apps" tabindex="0"><span>🎨</span><small>Apps</small></a>
+          <a class="app" href="#documents" tabindex="0"><span>📄</span><small>Documents</small></a>
+          <div class="extra-apps">
+            <a class="app" href="#chat" tabindex="0"><span>💬</span><small>Chat</small></a>
+            <a class="app" href="#classroom" tabindex="0"><span>🎓</span><small>Classroom</small></a>
+            <a class="app" href="#collection" tabindex="0"><span>🔖</span><small>Collection</small></a>
+            <a class="app" href="#blogs" tabindex="0"><span>📝</span><small>Blogs</small></a>
+            <a class="app" href="#promos" tabindex="0"><span>📣</span><small>Promos</small></a>
+            <a class="app" href="#music" tabindex="0"><span>🎵</span><small>Music</small></a>
+          </div>
+        </div>
+      </div>
+      <label class="more-button" for="more-toggle" tabindex="0">More</label>
+    </section>
+  </main>
+</body>
+</html>
