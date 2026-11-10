@@ -1,0 +1,21 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 35px 18px; font-family: Arial, sans-serif; color: #263238; background: linear-gradient(135deg, #edf2f7, #dce6f1); }
+.gallery { max-width: 1050px; margin: auto; text-align: center; }
+h1 { margin-bottom: 10px; }
+.lead { color: #66727e; margin-bottom: 35px; }
+.cards { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+.card { position: relative; width: 290px; padding: 0 0 20px; overflow: hidden; background: white; border-radius: 12px; box-shadow: 0 8px 22px #152b4533; transition: transform .25s, box-shadow .25s; }
+.card:hover { transform: translateY(-8px); box-shadow: 0 16px 32px #152b4560; }
+.card-image { height: 145px; display: grid; place-items: center; color: white; font-size: 48px; font-weight: 700; }
+.image-one { background: linear-gradient(135deg, #4776e6, #8e54e9); }
+.image-two { background: linear-gradient(135deg, #11998e, #38ef7d); opacity: .65; transition: opacity .25s; }
+.card-two:hover .image-two { opacity: 1; }
+.image-three { background: linear-gradient(135deg, #f7971e, #ffd200); }
+.card h2 { font-size: 21px; }
+.card p { padding: 0 18px; line-height: 1.5; color: #5f6872; }
+.layers { position: relative; width: 360px; height: 170px; margin: 55px auto 20px; }
+.layer { position: absolute; display: grid; place-items: center; width: 250px; height: 125px; border: 3px solid #263238; border-radius: 8px; font-weight: 700; }
+.layer-back { top: 0; left: 0; background: #5592d7; color: white; z-index: 1; }
+.layer-front { right: 0; bottom: 0; background: #08b45b; color: #102b1c; opacity: .88; z-index: 2; transition: opacity .25s; }
+.layer-front:hover { opacity: .55; }
+.hint { color: #697681; font-size: 14px; }
