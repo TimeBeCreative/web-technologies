@@ -1,0 +1,1 @@
+.reorder { display: flex; flex-direction: column; gap: 8px; } .reorder .article { order: 0; } .reorder .sidebar { order: 1; } .reorder .note { order: 2; } @media (min-width: 650px) { .reorder { flex-direction: row; } .reorder .article { flex: 2; } .reorder .sidebar { order: 0; flex: 1; } }

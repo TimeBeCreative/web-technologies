@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>20. Create a mobile app layout with Flexbox</title>
+    <link rel="stylesheet" href="../../reset.css">
+    <link rel="stylesheet" href="../../shared.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <a class="back" href="../../index.html">← До списку уроків</a>
+        <header class="lesson-head">
+            <p class="eyebrow">Урок 20 / 20</p>
+            <h1>Create a mobile app layout with Flexbox</h1>
+            <p class="explain">Мобільний інтерфейс часто складається з вертикальних зон: верхня панель, основний контент, навігація знизу.</p>
+        </header>
+        <section aria-label="Демонстрація властивостей flexbox">
+            <h2>Живий приклад</h2>
+            <div class="stage app">
+                <header>☰ &nbsp; My App</header>
+                <main>
+                    <div class="tile">Today</div>
+                    <div class="tile">Activity</div>
+                    <div class="tile">Messages</div>
+                </main>
+                <footer>Home &nbsp; Search &nbsp; Profile</footer>
+            </div>
+        </section>
+        <section>
+            <h2>Основний CSS</h2>
+            <pre>
+                    <code>.app { display: flex; flex-direction: column; min-height: 100vh; } .app main { flex: 1; } .app footer { margin-top: auto; }</code>
+                </pre>
+        </section>
+    </main>
+</body>
+
+</html>

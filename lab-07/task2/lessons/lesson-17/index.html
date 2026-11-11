@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>17. Flexbox Pricing Grid</title>
+    <link rel="stylesheet" href="../../reset.css">
+    <link rel="stylesheet" href="../../shared.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <a class="back" href="../../index.html">← До списку уроків</a>
+        <header class="lesson-head">
+            <p class="eyebrow">Урок 17 / 20</p>
+            <h1>Flexbox Pricing Grid</h1>
+            <p class="explain">Тарифні картки можна розташувати в один ряд, а на малих екранах переносити. Кожна картка має однакову базову ширину.</p>
+        </header>
+        <section aria-label="Демонстрація властивостей flexbox">
+            <h2>Живий приклад</h2>
+            <div class="stage pricing">
+                <article>
+                    <b>Basic</b>
+                    <strong>$9</strong>
+                    <span>For starters</span>
+                </article>
+                <article>
+                    <b>Pro</b>
+                    <strong>$19</strong>
+                    <span>For teams</span>
+                </article>
+                <article>
+                    <b>Studio</b>
+                    <strong>$39</strong>
+                    <span>For studios</span>
+                </article>
+            </div>
+        </section>
+        <section>
+            <h2>Основний CSS</h2>
+            <pre>
+                    <code>.plans { display: flex; flex-wrap: wrap; gap: 16px; } .plan { flex: 1 1 220px; }</code>
+                </pre>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>11. Finally understanding Flexbox flex-grow, flex-shrink and flex-basis</title>
+    <link rel="stylesheet" href="../../reset.css">
+    <link rel="stylesheet" href="../../shared.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <a class="back" href="../../index.html">← До списку уроків</a>
+        <header class="lesson-head">
+            <p class="eyebrow">Урок 11 / 20</p>
+            <h1>Finally understanding Flexbox flex-grow, flex-shrink and flex-basis</h1>
+            <p class="explain">`flex-grow` визначає розтягування, `flex-shrink` — стискання, `flex-basis` — початковий розмір.</p>
+        </header>
+        <section aria-label="Демонстрація властивостей flexbox">
+            <h2>Живий приклад</h2>
+            <div class="stage grow">
+                <div class="tile">Grow 2</div>
+                <div class="tile">Grow 1</div>
+                <div class="tile">Fixed basis</div>
+            </div>
+        </section>
+        <section>
+            <h2>Основний CSS</h2>
+            <pre>
+                    <code>.a { flex: 2 1 120px; } .b { flex: 1 1 120px; } .c { flex: 0 1 180px; }</code>
+                </pre>
+        </section>
+    </main>
+</body>
+
+</html>

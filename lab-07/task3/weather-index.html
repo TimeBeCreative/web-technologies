@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Адаптивний прогноз погоди на сім днів, створений за допомогою Flexbox.">
+    <title>Weather Forecast — Flexbox</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="weather-card">
+        <header class="city-header">
+            <p class="eyebrow">WEEKLY FORECAST</p>
+            <h1>New York, NY</h1>
+            <p class="date">Tuesday, April 15th · Overcast</p>
+        </header>
+
+        <section class="current" aria-label="Поточна погода">
+            <div class="current-main">
+                <img src="icons/iconfinder_weather01.png" width="86" height="86" alt="Хмарна погода">
+                <div>
+                    <strong class="current-temp">58°</strong>
+                    <span>F</span>
+                </div>
+            </div>
+
+            <div class="current-details">
+                <p>Precipitation: <strong>100%</strong></p>
+                <p>Humidity: <strong>97%</strong></p>
+                <p>Wind: <strong>4 mph SW</strong></p>
+                <p>Pollen Count: <strong>36</strong></p>
+            </div>
+        </section>
+
+        <section class="forecast" aria-label="Прогноз погоди на сім днів">
+            <article class="forecast-day">
+                <h2>Today</h2>
+                <img src="icons/iconfinder_weather02.png" width="64" height="64" alt="Гроза та дощ" loading="lazy">
+                <p class="temps"><strong>68°</strong><span>36°</span></p>
+                <p class="pollen">Pollen 36</p>
+            </article>
+
+            <article class="forecast-day">
+                <h2>Wednesday</h2>
+                <img src="icons/iconfinder_weather03.png" width="64" height="64" alt="Сонячно" loading="lazy">
+                <p class="temps"><strong>50°</strong><span>39°</span></p>
+                <p class="pollen">Pollen 36</p>
+            </article>
+
+            <article class="forecast-day">
+                <h2>Thursday</h2>
+                <img src="icons/iconfinder_weather04.png" width="64" height="64" alt="Сонячно" loading="lazy">
+                <p class="temps"><strong>55°</strong><span>39°</span></p>
+                <p class="pollen">Pollen 36</p>
+            </article>
+
+            <article class="forecast-day">
+                <h2>Friday</h2>
+                <img src="icons/iconfinder_weather05.png" width="64" height="64" alt="Мінлива хмарність" loading="lazy">
+                <p class="temps"><strong>54°</strong><span>43°</span></p>
+                <p class="pollen">Pollen 36</p>
+            </article>
+
+            <article class="forecast-day">
+                <h2>Saturday</h2>
+                <img src="icons/iconfinder_weather06.png" width="64" height="64" alt="Дощ" loading="lazy">
+                <p class="temps"><strong>64°</strong><span>46°</span></p>
+                <p class="pollen">Pollen 36</p>
+            </article>
+
+            <article class="forecast-day">
+                <h2>Sunday</h2>
+                <img src="icons/iconfinder_weather07.png" width="64" height="64" alt="Дощ" loading="lazy">
+                <p class="temps"><strong>64°</strong><span>50°</span></p>
+                <p class="pollen">Pollen 36</p>
+            </article>
+
+            <article class="forecast-day">
+                <h2>Monday</h2>
+                <img src="icons/iconfinder_weather08.png" width="64" height="64" alt="Мінлива хмарність" loading="lazy">
+                <p class="temps"><strong>61°</strong><span>50°</span></p>
+                <p class="pollen">Pollen 36</p>
+            </article>
+        </section>
+
+        <footer>
+            <span>Weather UI practice</span>
+            <span>Built with HTML + Flexbox</span>
+        </footer>
+    </main>
+</body>
+
+</html>

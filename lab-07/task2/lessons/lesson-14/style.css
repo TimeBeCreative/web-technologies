@@ -1,0 +1,1 @@
+.nav-demo { display: flex; align-items: center; justify-content: space-between; } .nav-demo div { display: flex; gap: 14px; } .nav-demo a { color: #fff; text-decoration: none; }

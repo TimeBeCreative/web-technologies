@@ -1,0 +1,1 @@
+.align-items { display: flex; align-items: center; gap: 10px; min-height: 150px; } .align-items .short { height: 45px; } .align-items .medium { height: 80px; } .align-items .tall { height: 115px; }

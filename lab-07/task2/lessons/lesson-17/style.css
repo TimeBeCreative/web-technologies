@@ -1,0 +1,1 @@
+.pricing { display: flex; flex-wrap: wrap; gap: 10px; } .pricing article { display: flex; flex: 1 1 150px; flex-direction: column; gap: 8px; padding: 18px; background: #fff; color: #27313b; border-radius: 10px; } .pricing strong { font-size: 28px; }

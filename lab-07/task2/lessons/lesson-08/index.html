@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>08. Alignment and Centering with align-content</title>
+    <link rel="stylesheet" href="../../reset.css">
+    <link rel="stylesheet" href="../../shared.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <a class="back" href="../../index.html">← До списку уроків</a>
+        <header class="lesson-head">
+            <p class="eyebrow">Урок 08 / 20</p>
+            <h1>Alignment and Centering with align-content</h1>
+            <p class="explain">`align-content` керує розташуванням кількох flex-ліній. Потрібні `flex-wrap: wrap` та вільний простір по поперечній осі.</p>
+        </header>
+        <section aria-label="Демонстрація властивостей flexbox">
+            <h2>Живий приклад</h2>
+            <div class="stage align-content">
+                <div class="tile">1</div>
+                <div class="tile">2</div>
+                <div class="tile">3</div>
+                <div class="tile">4</div>
+                <div class="tile">5</div>
+                <div class="tile">6</div>
+            </div>
+        </section>
+        <section>
+            <h2>Основний CSS</h2>
+            <pre>
+                    <code>.container { display: flex; flex-wrap: wrap; align-content: space-between; }</code>
+                </pre>
+        </section>
+    </main>
+</body>
+
+</html>

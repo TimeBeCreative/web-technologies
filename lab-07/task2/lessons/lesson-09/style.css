@@ -1,0 +1,1 @@
+.self { display: flex; align-items: flex-start; min-height: 150px; gap: 10px; } .self .tile:nth-child(2) { align-self: flex-end; } .self .tile:nth-child(3) { align-self: center; }
