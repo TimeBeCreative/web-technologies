@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Адаптивна сітка карток на CSS Grid з обробкою довгого тексту.">
+    <title>Завдання 4 — картки CSS Grid</title>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="cards.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#cards">Перейти до карток</a>
+    <header class="page-header site-shell">
+        <p class="eyebrow">Завдання 4 · парний варіант</p>
+        <h1>Ідеї для наступної подорожі</h1>
+        <p class="page-intro">Шість карток розміщені у п’ятиколонковій сітці. Перша картка займає дві колонки та два рядки. Довгий текст переноситься, а в одній картці довгий опис має власну прокрутку.</p>
+    </header>
+    <main id="cards" class="site-shell cards-section">
+        <div class="card-grid">
+            <article class="travel-card travel-card--featured">
+                <img class="travel-card__image" src="../assets/photos/02-forest-trail.jpg" alt="Стежка через зелений ліс">
+                <div class="travel-card__body">
+                    <p class="travel-card__tag">Вибір редакції</p>
+                    <h2>Відкрий нові маршрути</h2>
+                    <p class="travel-card__text">Подорожі починаються з цікавості. Обирай маршрут, плануй зупинки та залишай місце для несподіваних відкриттів серед природи.</p>
+                    <p class="travel-card__extra">Продуманий маршрут допомагає побачити більше, але найкращі враження часто з’являються тоді, коли можна трохи відхилитися від плану та дослідити нове місце.</p>
+                    <h3 class="travel-card__subheading">Going forward</h3>
+                    <div class="grid-demo" role="img" aria-label="Схематична сітка з чотирма колонками та трьома рядками">
+                        <span>Column 1</span><span>Column 2</span><span>Column 3</span><span>Column 4</span>
+                        <span>Row 1</span><span>Row 1</span><span>Row 1</span><span>Row 1</span>
+                        <span>Row 2</span><span>Row 2</span><span>Row 2</span><span>Row 2</span>
+                    </div>
+                    <a class="travel-card__button" href="#more">Дізнатися більше</a>
+                </div>
+            </article>
+            <article class="travel-card">
+                <img class="travel-card__image" src="../assets/photos/03-hidden-cove.jpg" alt="Тиха морська бухта">
+                <div class="travel-card__body">
+                    <h2>Тихі бухти</h2>
+                    <p class="travel-card__text">Затишні береги, прозора вода та можливість побути наодинці з природою.</p><a class="travel-card__button" href="#more">Переглянути</a></div>
+            </article>
+            <article class="travel-card">
+                <img class="travel-card__image" src="../assets/photos/01-coast.jpg" alt="Зелена затока та пляж">
+                <div class="travel-card__body">
+                    <h2>Зелені узбережжя</h2>
+                    <p class="travel-card__text">Піщані пляжі, схили та панорамні краєвиди для неспішних прогулянок.</p><a class="travel-card__button" href="#more">Читати далі</a></div>
+            </article>
+            <article class="travel-card">
+                <img class="travel-card__image" src="../assets/photos/07-longtail-boat.jpg" alt="Човен на бірюзовій воді">
+                <div class="travel-card__body">
+                    <h2>Морські пригоди</h2>
+                    <p class="travel-card__text">Спробуй новий маршрут уздовж узбережжя та побач місця з води.</p><a class="travel-card__button" href="#more">Вперед</a></div>
+            </article>
+            <article class="travel-card">
+                <img class="travel-card__image" src="../assets/photos/06-street-tuk-tuk.jpg" alt="Транспорт на вулиці міста">
+                <div class="travel-card__body">
+                    <h2>Міські маршрути</h2>
+                    <p class="travel-card__text">Досліджуй місцеву архітектуру, вуличне життя та маленькі кафе.</p><a class="travel-card__button" href="#more">Дослідити</a></div>
+            </article>
+            <article class="travel-card travel-card--overflow">
+                <img class="travel-card__image" src="../assets/photos/10-coffee-garden.jpg" alt="Кава на столику в саду">
+                <div class="travel-card__body">
+                    <h2>Довгий опис: перевірка переповнення</h2>
+                    <div class="travel-card__scroll">
+                        <p class="travel-card__text">Цей блок навмисно містить більше тексту, ніж зазвичай потрібно для короткого опису картки. Його висота обмежена, але вміст не обрізається без пояснення: користувач може прокрутити текст усередині. Таке рішення корисне, коли картки
+                            мають однакову висоту, а обсяг описів відрізняється. Додатковий текст показує, що вміст не виходить за межі картки та не ламає сітку. Перевір також вузький екран, на якому картки переходять в одну колонку.</p>
+                    </div><a class="travel-card__button" href="#more">Дивитися</a></div>
+            </article>
+        </div>
+        <p id="more" class="cards-note">Реалізовано адаптивність для ширин до 768 px та до 576 px. Картки автоматично збільшують висоту, коли вмісту більше; спеціальний опис демонструє вертикальну прокрутку.</p>
+    </main>
+</body>
+
+</html>

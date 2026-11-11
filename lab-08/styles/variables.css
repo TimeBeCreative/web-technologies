@@ -1,0 +1,20 @@
+:root {
+  color-scheme: light;
+  --color-ink: #17212b;
+  --color-muted: #607080;
+  --color-paper: #f5f7fb;
+  --color-surface: #ffffff;
+  --color-primary: #2357a5;
+  --color-primary-dark: #173c77;
+  --color-accent: #ffd943;
+  --color-border: #dce3ed;
+  --color-sidebar: #e8f0fb;
+  --color-nav: #e2eaf5;
+  --color-ads: #fff0cf;
+  --color-footer: #e9edf2;
+  --shadow-card: 0 0.5rem 1.5rem rgb(20 35 55 / 9%);
+  --radius-card: 1rem;
+  --page-width: 76rem;
+  --page-gutter: clamp(1rem, 3vw, 2rem);
+  --grid-gap: 1rem;
+}

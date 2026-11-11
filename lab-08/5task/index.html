@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Завдання 5B — Grid template areas</title>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="layout.css">
+</head>
+
+<body>
+    <header class="page-header site-shell">
+        <p class="eyebrow">Завдання 5 · mobile-first</p>
+        <h1>Адаптивний layout: іменовані області</h1>
+    </header>
+    <main class="site-shell">
+        <div class="responsive-layout">
+            <header class="layout-block layout-header">
+                <h2>Header</h2>
+                <p>Логотип та назва сайту</p>
+            </header>
+            <nav class="layout-block layout-nav" aria-label="Основна навігація">
+                <h2>Navigation</h2>
+                <p>Головна · Про нас · Контакти</p>
+            </nav>
+            <aside class="layout-block layout-sidebar">
+                <h2>Sidebar</h2>
+                <p>Додаткова інформація, посилання та фільтри.</p>
+            </aside>
+            <section class="layout-block layout-main">
+                <h2>Main</h2>
+                <p>Основний вміст сторінки. На мобільному екрані блок займає окремий рядок; на планшеті та комп’ютері він змінює позицію відповідно до сітки.</p>
+                <p>Grid дозволяє керувати рядками та колонками одночасно, не змінюючи HTML-порядок елементів.</p>
+            </section>
+            <aside class="layout-block layout-ads">
+                <h2>Ads</h2>
+                <p>Блок реклами або додаткової інформації.</p>
+            </aside>
+            <footer class="layout-block layout-footer">
+                <h2>Footer</h2>
+                <p>Контакти · Авторські права · Соціальні мережі</p>
+            </footer>
+        </div>
+    </main>
+</body>
+
+</html>
